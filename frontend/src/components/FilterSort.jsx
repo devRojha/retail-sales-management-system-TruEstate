@@ -5,6 +5,9 @@ import GenderDropdown from './GenderDropdown';
 import PaymentMethodDropdown from './PaymentMethodDropdown';
 import ProductCategoryDropdown from './ProductCategoryDropDown';
 import TagDropdown from './TagDropdown';
+import SortData from './SortData';
+import DateDropdown from './DateDropdown';
+import AgeDropdown from './AgeDropdown';
 
 export default function FilterSort () {
     return (
@@ -14,18 +17,14 @@ export default function FilterSort () {
 
               <CustomerRegionDropdown/>
               <GenderDropdown/>
-
-              <select name='Age Range' id='Age Range'>
-                <option value="Age">Age</option>
-              </select>
-
+              <AgeDropdown />
               <ProductCategoryDropdown/>
               <TagDropdown/>
               <PaymentMethodDropdown/>
 
-              <div>Date</div>
+              <DateDropdown />
             </div>
-            <div>Sort By:</div>
+            <SortData />
           </div>
     )
 }

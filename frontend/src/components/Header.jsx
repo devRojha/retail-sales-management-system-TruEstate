@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/header.css'
+import Search from './Search';
 
 export default function Header () {
     const [searchInput, setSearchInput] = useState("");
@@ -7,7 +8,9 @@ export default function Header () {
     return (
         <div className='header'>
             <div className='header_content'>Sales Management System</div>
-            <input className='search_input' placeholder='Search with name or phone' onChange={(e) => setSearchInput(e.target.value)}></input>
+            
+            {/* search */}
+            <Search />
           </div>
     )
 }

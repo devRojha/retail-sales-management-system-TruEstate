@@ -1,29 +1,25 @@
-.age_dropdown {
+.sortData_dropdown {
     position: relative;
-    width: 80px;
+    width: 60px;
 }
 
-.age_dropdown_button {
+.sortData_dropdown_button {
     width: 100%;
     padding: 8px;
     cursor: pointer;
-    display: flex;
+    display: flex; 
     justify-content: center; 
     align-items: center; 
     border: none
 }
 
-.age_dropdown_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
+.sortData_dropdown_container {
     position: absolute;
     border: 1px solid #ccc;
     background: white;
-    width: 160px;
+    right: 0;
+    width: 180px;
     margin-top: 2px;
     z-index: 100;
-    padding: 15px;
+    padding: 5px;
 }

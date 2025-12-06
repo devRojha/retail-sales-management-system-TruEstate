@@ -1,20 +1,27 @@
 .all_transactions_details {
-    width: 150%;
+    width: 100%;
+    overflow-x: auto;
 }
 
 .transaction-header {
+    width: 150%;
     height: 40px;
     font-size: 15px;
     color: rgb(91, 91, 91);
     background-color: rgb(238, 238, 238);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .transaction{
+    width: 150%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.transactionID {
+    margin-left: 10px;
 }

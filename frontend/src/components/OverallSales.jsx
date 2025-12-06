@@ -1,15 +1,19 @@
+import { use } from 'react'
 import '../styles/overallSales.css'
+import { useRecoilValue } from 'recoil'
+import { summaryAtom } from '../atoms/summary';
 
 export default function OverallSales () {
+    const summaryData = useRecoilValue(summaryAtom);
     return (
         <div  className='overall_sales'>
           <div className='total_sales'>
             <div>
-              Total Units Sold
+                Total Units Soled
             </div>
 
             <div>
-              {/* {data.total_units_sold} */}
+              {summaryData.totalQuantity || 0}
             </div>
           </div>
 
@@ -19,7 +23,7 @@ export default function OverallSales () {
             </div>
 
             <div>
-              {/* {data.total_amount} */}
+              {summaryData.totalAmount || 0}
             </div>
           </div>
 
@@ -29,7 +33,7 @@ export default function OverallSales () {
             </div>
 
             <div>
-              {/* {data.total_discount} */}
+              {summaryData.totalDiscount || 0}
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ export default function Transaction ({index, data}) {
     return (
         <div className="transaction">
             <div>{data["Transaction ID"]}</div>
-            <div>{data["Date"]}</div>
+            <div>{data["Date"].split("T")[0]}</div>
             <div>{data["Customer ID"]}</div>
             <div>{data["Customer Name"]}</div>
             <div>{data["Phone Number"]}</div>

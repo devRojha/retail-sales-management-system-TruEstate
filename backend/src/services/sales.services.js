@@ -1,5 +1,7 @@
+import { get } from "mongoose";
 import { getSalesCount, getSalesQuery } from "../repository/salesQuery.js";
 import redis from "../utils/redis.utils.js";
+import { getSalesSummary } from "../utils/sales.js";
 
 export const getSales = async (query) => {
     let mongoQuery = {};
@@ -97,11 +99,14 @@ export const getSales = async (query) => {
 
     const total = await getSalesCount(mongoQuery);
 
+    const summary = getSalesSummary(sales);
+
     const response = {
         page,
         totalPages: Math.ceil(total / limit),
         total,
         sales,
+        summary
     };
 
     

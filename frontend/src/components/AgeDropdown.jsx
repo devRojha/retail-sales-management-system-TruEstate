@@ -1,10 +1,8 @@
 import { useState, useRef } from "react";
-import RangeSlider from "./RangeSlider";
 import "../styles/ageDropdown.css";
 
 export default function AgeDropdown() {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState([0, 100]);
   const containerRef = useRef(null);
 
   const handleBlur = (e) => {
@@ -21,7 +19,11 @@ export default function AgeDropdown() {
 
       {open && (
         <div className="age_dropdown_container">
-          <RangeSlider value={value} setValue={setValue} />
+          <input type="number" placeholder="From Age" onChange={(e) => {
+
+          }} />
+          <input type="number" placeholder="To Age" onChange={(e) => {
+          }} />
         </div>
       )}
     </div>
