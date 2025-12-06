@@ -1,7 +1,18 @@
 import { getSalesCount, getSalesQuery } from "../repository/salesQuery.js";
+import redis from "../utils/redis.utils.js";
 
 export const getSales = async (query) => {
     let mongoQuery = {};
+
+    
+    // const cacheKey = `sales:${JSON.stringify(query)}`; // create a unique cache key based on query params
+    // const cachedData = await redis.get(cacheKey); // check if data exists in cache
+
+    // if (cachedData) {
+    //     // Cache Hit 
+    //     return JSON.parse(cachedData);
+    // }
+
 
     // search either on name or phone
     if (query.search) {
@@ -12,7 +23,6 @@ export const getSales = async (query) => {
                     $regexMatch: {
                         input: { $toString: "$Phone Number" },
                         regex: query.search,
-                        options: "i"
                     }
                 }
             }
@@ -87,10 +97,17 @@ export const getSales = async (query) => {
 
     const total = await getSalesCount(mongoQuery);
 
-    return {
+    const response = {
         page,
         totalPages: Math.ceil(total / limit),
         total,
         sales,
     };
+
+    
+    // await redis.set(cacheKey, JSON.stringify(response), { 
+    //     'EX': 60 * 10 // store the response in cache for future requests (expires in 10 minutes)
+    // });
+    
+    return response;
 };

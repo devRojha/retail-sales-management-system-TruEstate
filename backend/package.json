@@ -1,5 +1,5 @@
 {
-  "name" : "retail-sales-management-system-backend",
+  "name": "retail-sales-management-system-backend",
   "type": "module",
   "version": "1.0.0",
   "description": "Backend for Retail Sales Management System",
@@ -12,6 +12,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.0.1",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "redis": "^5.10.0"
   }
 }
