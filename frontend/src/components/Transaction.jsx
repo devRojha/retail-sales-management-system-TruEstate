@@ -7,7 +7,15 @@ export default function Transaction ({index, data}) {
             <div>{data["Date"].split("T")[0]}</div>
             <div>{data["Customer ID"]}</div>
             <div>{data["Customer Name"]}</div>
-            <div>{data["Phone Number"]}</div>
+            <div className="phone_container">
+                <div>
+                    +91 {data["Phone Number"]} 
+                </div>
+
+                <img className="copy_image" src="./copy.jpg" alt="copyImage" onClick={() => {
+                    navigator.clipboard.writeText(data["Phone Number"]);
+                }} />
+            </div>
             <div>{data["Gender"]}</div>
             <div>{data["Age"]}</div>
             <div>{data["Product Category"]}</div>

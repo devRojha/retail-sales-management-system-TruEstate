@@ -23,7 +23,8 @@ export default function AllTransactions() {
                 const summary = {
                     totalQuantity: temp.summary.totalQuantity,
                     totalAmount: temp.summary.totalAmount,
-                    totalDiscount: temp.summary.totalAmount - temp.summary.finalAmount,
+                    totalDiscount: Number((temp.summary.totalAmount - temp.summary.finalAmount).toFixed(2)),
+
                 };
                 setSummary(summary);
                 setData(temp);
