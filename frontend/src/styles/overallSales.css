@@ -1,0 +1,55 @@
+.overall_sales {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.total_sales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 10px;
+    transition-duration: 200ms;
+}
+
+.total_sales:hover {
+    background-color: rgb(235, 234, 234);
+}
+
+.total_amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 10px;
+    transition-duration: 200ms;
+}
+
+.total_amount:hover {
+    background-color: rgb(235, 234, 234);
+}
+
+.total_discount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 10px;
+    transition-duration: 200ms;
+}
+
+.total_discount:hover {
+    background-color: rgb(235, 234, 234);
+}

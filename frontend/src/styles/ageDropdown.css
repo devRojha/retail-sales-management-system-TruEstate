@@ -1,0 +1,27 @@
+.age_dropdown {
+    position: relative;
+    width: 80px;
+}
+
+.age_dropdown_button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: none
+}
+
+.age_dropdown_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 1px solid #ccc;
+    background: white;
+    width: 160px;
+    margin-top: 2px;
+    z-index: 100;
+    padding: 15px;
+}

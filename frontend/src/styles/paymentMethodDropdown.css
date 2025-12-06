@@ -1,0 +1,26 @@
+.payment_method_dropdown {
+    position: relative;
+    width: 170px;
+    height: 10px;
+}
+
+.payment_method_dropdown_button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.payment_method_dropdown_container {
+    position: absolute;
+    border: 1px solid #ccc;
+    background: white;
+    width: 100%;
+    margin-top: 2px;
+    z-index: 100;
+    padding: 5px;
+}

@@ -1,0 +1,27 @@
+.filter_sort {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.filters {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.refresh_button {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: rgb(237, 236, 236);
+    transition-duration: 200ms;
+}
+
+.refresh_button:hover {
+    background-color: rgb(235, 234, 234);
+}
