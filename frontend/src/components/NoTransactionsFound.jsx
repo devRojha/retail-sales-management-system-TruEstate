@@ -1,5 +1,5 @@
 
-import "../styles/NoTransaction.css";
+import "../styles/noTransaction.css";
 
 
 export default function NoTransactionsFound() {
