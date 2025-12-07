@@ -124,6 +124,14 @@ Ex3 : page = 3 => skip = 20
 ```
 cd frontend
 
+
+# create .env file
+touch .env
+
+# then place the base backend url
+VITE_BACKEND_URL=http://localhost:3012
+
+
 # Install dependencies
 npm i
 
@@ -136,6 +144,15 @@ npm run dev
 
 ```
 cd backend
+
+
+# create .env file
+touch .env
+
+# then place the mongoDB URL and port number
+MONGODB_URL=
+PORT=3012
+
 
 # Install dependencies
 npm i
