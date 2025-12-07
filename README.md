@@ -14,7 +14,7 @@ Backend : Node.js, Express.js, Javascript, Redis
 
 Database : MongoDB
 
-Deployment : Azure Virtual Machine
+Deployment : Azure VM (Backend), NGINX (API Gateway), Vercel (Frontend), .tech (Domain)
 
 Other : Axios, dotenv, Recoil (State Management)
 
