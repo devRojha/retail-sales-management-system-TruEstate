@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import "../styles/sortDataDropdown.css";
+import "../styles/sortDataDropDown.css";
 import { useRecoilState } from "recoil";
 import { filterAtom } from "../atoms/filterAtom";
 
