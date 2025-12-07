@@ -1,8 +1,8 @@
 import buildQuery from "../utils/buildQuery";
 
 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL + '/api/v1';
 
-const BASE_URL = 'http://localhost:3000/api/v1'; 
 
 export async function fetchSalesData(filters) {
 
