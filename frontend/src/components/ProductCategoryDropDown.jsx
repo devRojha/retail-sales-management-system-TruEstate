@@ -60,7 +60,7 @@ function ProductCategoryDropdown() {
       onKeyDown={handleKeyDown}
     >
       <button className="product_category_dropdown_button" type="button" onClick={() => setOpen(!open)}>
-        Product Category
+        Product Category  <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "3px", width: "6px", height: "6px" }}/>
       </button>
 
       {open && (

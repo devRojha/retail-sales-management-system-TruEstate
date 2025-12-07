@@ -53,7 +53,7 @@ export default function AgeDropdown() {
         type="button"
         onClick={() => setOpen(!open)}
       >
-        Age
+        Age <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "5px", width: "10px", height: "10px" }}/>
       </button>
 
       {open && (

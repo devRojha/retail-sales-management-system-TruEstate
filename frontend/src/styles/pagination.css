@@ -1,0 +1,40 @@
+.pagination-wrapper {
+  border: 1px solid #E5E5EA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.pagination-container {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.page-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #F1F1F5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.page-box:hover {
+  background-color: #E5E5EA;
+}
+
+.page-box.active {
+  background-color: #0F0F12;
+  color: white;
+}

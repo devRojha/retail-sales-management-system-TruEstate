@@ -49,7 +49,7 @@ function GenderDropdown() {
   return (
     <div className="gender_dropdown" ref={containerRef} tabIndex={0} onBlur={handleBlur}>
       <button className="gender_dropdown_button" type="button" onClick={() => setOpen(!open)} >
-        Gender
+        Gender <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "5px", width: "10px", height: "10px" }}/>
       </button>
 
       {open && (

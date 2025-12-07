@@ -1,10 +1,20 @@
 import { useRecoilState } from 'recoil';
-import { filterAtom } from '../atoms/filterAtom';
-import { useState, useEffect } from 'react';
+import { filterAtom, refreshAtom } from '../atoms/filterAtom';
+import { useState, useEffect, use } from 'react';
 
 export default function Search() {
-    const [, setFilter] = useRecoilState(filterAtom);
+    const  setFilter = useRecoilState(filterAtom)[1];
+    const [refresh, setRefresh] = useRecoilState(refreshAtom);
     const [input, setInput] = useState("");
+
+
+  useEffect(() => {
+    if (refresh) {
+      setInput([]);
+      setRefresh(false);
+    }
+  }, [refresh]);
+        
 
     // Debounce effect
     useEffect(() => {
@@ -17,7 +27,7 @@ export default function Search() {
         }, 500);  // wait 500ms after user stops typing
 
         return () => clearTimeout(timeout); // cleanup previous timer
-    }, [input, setFilter]);
+    }, [input]);
 
     return (
             <>

@@ -48,7 +48,7 @@ export default function DateDropdown() {
         type="button"
         onClick={() => setOpen(!open)}
       >
-        Date
+        Date    <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "5px", width: "10px", height: "10px" }}/>
       </button>
 
       {open && (

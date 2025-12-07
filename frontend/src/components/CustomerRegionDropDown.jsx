@@ -59,7 +59,7 @@ function CustomerRegionDropdown() {
     <div
       className="customer_region_dropdown" ref={containerRef} tabIndex={0} onBlur={handleBlur} onKeyDown={handleKeyDown}>
       <button className="customer_region_dropdown_button" type="button" onClick={() => setOpen(!open)}>
-        Customer Region
+        Customer Region <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "5px", width: "10px", height: "10px" }}/>
       </button>
 
       {open && (

@@ -23,7 +23,7 @@ export default function OverallSales () {
             </div>
 
             <div>
-              {summaryData.totalAmount || 0}
+              ₹ {summaryData.totalAmount || 0}
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export default function OverallSales () {
             </div>
 
             <div>
-              {summaryData.totalDiscount || 0}
+              ₹ {summaryData.totalDiscount || 0}
             </div>
           </div>
         </div>

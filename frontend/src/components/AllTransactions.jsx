@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Transaction from './Transaction';
 import { summaryAtom } from '../atoms/summary';
+import NumberPagination from './NumberPagination';
+import NoTransactionsFound from './NoTransactionsFound';
 
 export default function AllTransactions() {
     const filters = useRecoilValue(filterAtom);
@@ -24,7 +26,6 @@ export default function AllTransactions() {
                     totalQuantity: temp.summary.totalQuantity,
                     totalAmount: temp.summary.totalAmount,
                     totalDiscount: Number((temp.summary.totalAmount - temp.summary.finalAmount).toFixed(2)),
-
                 };
                 setSummary(summary);
                 setData(temp);
@@ -36,14 +37,26 @@ export default function AllTransactions() {
     }, [filters]);
 
     return (
-        <div className='all_transactions_details'>
-            <TransactionsHeader />
+        <div>
+            <div className='all_transactions_details'>
+                <TransactionsHeader />
+                {
+                    (data.sales.length === 0) ?
+                        <div >
+                           <NoTransactionsFound />
+                        </div>
+                        :
+                        <div>
+                            {data?.sales?.map((item, index) => (
+                                <Transaction key={index} data={item} />
+                            ))}
+                        </div>
+                }
 
-            <div>
-                {data?.sales?.map((item, index) => (
-                    <Transaction key={index} data={item} />
-                ))}
+                {/* page navigation */}
+                
             </div>
+            <NumberPagination page={filters.page} totalPages={data.totalPages} />
         </div>
     );
 }

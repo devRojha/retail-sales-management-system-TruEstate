@@ -7,7 +7,7 @@
     width: 100%;
     padding: 8px;
     cursor: pointer;
-    display: flex; 
+    /* display: flex;  */
     justify-content: center; 
     align-items: center; 
     border: none

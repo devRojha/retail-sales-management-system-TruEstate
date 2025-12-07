@@ -61,7 +61,7 @@ function PaymentMethodDropdown() {
   return (
     <div className="payment_method_dropdown" ref={containerRef} tabIndex={0} onBlur={handleBlur} onKeyDown={handleKeyDown}>
       <button className="payment_method_dropdown_button" type="button" onClick={() => setOpen(!open)}>
-        Select Payment Methods
+        Select Payment Methods  <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "0px", width: "5px", height: "5px" }}/>
       </button>
 
       {open && (

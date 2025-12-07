@@ -32,7 +32,7 @@ export default function SortDropdown({ setSort }) {
   return (
     <div className="sortData_dropdown" ref={containerRef} tabIndex={0} onBlur={handleBlur}>
       <button className="sortData_dropdown_button" type="button" onClick={() => setOpen(!open)}>
-        Sort By
+        Sort By <img src="/down.png" alt="dropdown arrow" style={{ marginLeft: "5px", width: "10px", height: "10px" }}/>
       </button>
 
       {open && (
