@@ -10,7 +10,7 @@ export default function ClearFilter () {
     return (
         <>
             <img src='refresh.png' onClick={() => {
-                setRefresh(true);
+                setRefresh(true);  
                 setFilter(filterParams)
                 console.log('filters cleared')
                 setTimeout(() => setRefresh(false), 50);
